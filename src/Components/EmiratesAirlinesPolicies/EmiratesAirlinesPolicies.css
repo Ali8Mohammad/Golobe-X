@@ -84,7 +84,9 @@ text-align: left;
 
 @media screen and (max-width:1308px){
 
- 
+  .RH_Emirates{
+    margin-top: 20px!important;
+  }
 
       .RH_container_time {
         width: auto;
@@ -134,5 +136,6 @@ text-align: left;
       .RH_w2{
         margin-top: 50px;
       }
+    
         
           }

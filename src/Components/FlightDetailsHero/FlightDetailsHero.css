@@ -1,3 +1,9 @@
+
+a{
+text-decoration: none;
+
+}
+
 .RH_TU {
     Width: 48px;
     Height: 17px;
@@ -150,6 +156,25 @@ border: none;
 
     cursor: pointer;
 }
+
+.RH_book a{
+text-decoration: none;
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 600;
+line-height: 17.07px;
+color: var(--main-text-color);
+}
+
+.RH_book a:visited{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    color: var(--main-text-color);
+    }
+    
 
 
 .RH_4btn{

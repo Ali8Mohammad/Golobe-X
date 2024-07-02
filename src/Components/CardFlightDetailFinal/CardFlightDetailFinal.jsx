@@ -2,14 +2,15 @@
 import './CardFlightDetailFinal.css'
 import Card from 'react-bootstrap/Card';
 import './../../../src/index.css'
-const CardFlightDetailFinal = () => {
+const CardFlightDetailFinal = ({page}) => {
     return (
-    <section className='Aya_Flight_Details_Final'>
+    <section className={page==='FlightBooking' ? 'Aya_Flight_Details_Final' : 'RH_Flight_Details_Final'}>
+
     <Card className='cards'>
         <Card.Body>
         <div className='part1 d-flex justify-content-between'>
-            <Card.Title className='title'>Emirates A380 Airbus</Card.Title>
-            <span className='span'>240 $</span>
+        <Card.Title className={page === 'FlightBooking' ? 'title' : 'd-none'}>Emirates A380 Airbus</Card.Title> 
+        <span className={page === 'FlightBooking' ? 'span' : 'd-none'}>240 $</span>
         </div>
         <div className='part2 d-flex justify-content-between'>
             <Card.Title className='title'>Return Wed, Dec 8</Card.Title>

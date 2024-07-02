@@ -4,19 +4,21 @@ import './FlightDetail.css';
 import FlightDetailsHero from '../../../Components/FlightDetailsHero/FlightDetailsHero';
 import EmiratesAirlinesPolicies from '../../../Components/EmiratesAirlinesPolicies/EmiratesAirlinesPolicies';
 import FlightDeatailsGalary from '../../../Components/FlightDeatailsGalary/FlightDeatailsGalary';
-import Footer from '../../../Components/Footer/Footer'
-import CardEmirates from '../../../Components/CardEmirates/CardEmirates';
+import Newsletter from '../../../Components/Newsletter/Newsletter';
+import Footer from '../../../Components/Footer/Footer';
+import CardFlightDetailFinal from '../../../Components/CardFlightDetailFinal/CardFlightDetailFinal';
+import PaymentMethods from '../../../Components/PaymentMethods/PaymentMethods'
 
 export default function FlightDetail() {
   return (
     <section className='RH_FlightDetail'>
-     
+
       <FlightDetailsHero />
       <FlightDeatailsGalary />
       <EmiratesAirlinesPolicies />
-      <CardEmirates />   
-      <CardEmirates />
-
+      <CardFlightDetailFinal />
+      <PaymentMethods/>
+      <Newsletter />
       <Footer />
 
 

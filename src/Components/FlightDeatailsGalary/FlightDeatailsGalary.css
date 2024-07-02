@@ -205,9 +205,9 @@ color: var(--main-text-color);
  
   .RH_Galary{
     width: auto;
+    height: max-content;
     margin: 0 auto;
 
-    margin-bottom: 200px!important;
   
 
   }
@@ -259,77 +259,4 @@ color: var(--main-text-color);
     margin-top: 20px;
   
     }
-  }
-
-  @media (max-width:786px) {
- 
-    .RH_Galary{
-      width: auto;
-      margin: 0 auto;
-  
-      margin-bottom: 250px!important;
-    
-  
-    }
-  }
-    
-  @media (max-width:758px) {
- 
-    .RH_Galary{
-      width: auto;
-      margin: 0 auto;
-  
-      margin-bottom: 380px!important;
-    
-  
-    }
-  }
-
-
-
-  @media (max-width:474px) {
- 
-    .RH_Galary{
-      width: auto;
-      margin: 0 auto;
-  
-      margin-bottom: 680px!important;
-    
-  
-    }
-  }
-
-  @media (max-width:338px) {
- 
-    .RH_Galary{
-      width: auto;
-      margin: 0 auto;
-  
-      margin-bottom: 1000px!important;
-    
-  
-    }
-  }
-
-  @media (max-width:330px) {
- 
-    .RH_Galary{
-      width: auto;
-      margin: 0 auto;
-  
-      margin-bottom: 1300px!important;
-    
-  
-    }
-  }
-
-  @media (max-width:430px) {
- 
-    .RH_lable_check {
-      font-size: 12px!important;
-        }
-
-        .RH_checkmark{
-          margin-left: -20px!important;
-        }
   }

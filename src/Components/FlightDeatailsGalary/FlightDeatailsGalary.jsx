@@ -57,8 +57,10 @@ export default function FlightDeatailsGalary() {
   return (
     <section className='RH_Galary'>
       <div className='RH_title_container'>
-        <p className='RH_title_Galary'>Basic Economy Features</p>
-        <div className='RH_Container_check'>
+        <p className='RH_title_Galary' data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">Basic Economy Features</p>
+        <div className='RH_Container_check' data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
 
         <label class="RH_lable_check  .RH_lable_check1">
 
@@ -103,7 +105,9 @@ export default function FlightDeatailsGalary() {
       {FlightDeatailsGalary.map((feature, index) => {
                 return (
                     <div className="RH_G_array" key={index}>
-                    <img src={feature.image}  className="RH_G_image"/>  
+                    <img src={feature.image}  className="RH_G_image" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"/>  
                     </div>
                 );
             })}
