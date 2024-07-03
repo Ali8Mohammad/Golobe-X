@@ -14,20 +14,52 @@
     background: #FAFAFA;
 }
 .FlightContainer {
-    width: 46.875rem;
+    width: 49.375rem;
 }
-@media (max-width : 1310px) {
+@media (min-width : 1310px) and (max-width : 1400px) {
+    .FlightContainer {
+        width: 46.375rem;
+    }
+}
+@media (min-width : 1270px) and (max-width : 1309px) {
+    .FlightContainer {
+        width: 44.375rem;
+    }
+}
+@media (min-width : 1225px) and (max-width : 1269px) {
+    .FlightContainer {
+        width: 42.375rem;
+    }
+}
+@media (min-width : 1180px) and (max-width : 1224px) {
+    .FlightContainer {
+        width: 39.375rem;
+    }
+}
+@media (min-width : 1130px) and (max-width : 1179px)  {
+    .FlightContainer {
+        width: 39.375rem;
+    }
+}
+@media (min-width : 1100px) and (max-width : 1129px) {
+    .FlightContainer {
+        width: 39.375rem;
+    }
+}
+@media (max-width : 1099px) {
     .FlightBookingRow {
         flex-wrap: wrap;
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 }
-@media(min-width : 992px) and (max-width : 1310px) {
+@media (min-width : 993px) and (max-width : 1099px)  {
     .FlightContainer {
         width: 56.25rem;
     }
 }
-@media(min-width : 768px) and (max-width : 991px) {
+@media (min-width : 768px) and (max-width : 992px)  {
     .FlightBookingRow {
         padding: 0 1.875rem;
     }
@@ -58,4 +90,4 @@
     .FlightContainer {
         width: 16.5rem;
     }
-}
+} 

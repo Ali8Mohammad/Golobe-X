@@ -1,9 +1,25 @@
 import './FlightCard.css'
 import Card from 'react-bootstrap/Card';
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+const data = {
+    part2_Span1 : "Your booking is protected by" ,
+    part2_Span2 : "golobe" ,
+    reviews_p : "54 reviews" ,
+    reviews_span : "Very Good" ,
+    title_part3 : "Price Details" ,
+    list1_item1 : "Base Fare" ,
+    list1_item2 : "Discount" ,
+    list1_item3 : "Taxes" ,
+    list1_item4 : "Service Fee" ,
+}
 const FlightCard = ({page , imgFlightCard ,title , subtitle ,button ,price_Base_Fare , price_Discount ,price_taxes ,price_Service_Fee,price_total}) => {
+    useEffect (() => {
+        Aos.init({duration : 2000})
+    }, [])
     return (
-    <section className='Aya-Flight_Card'>
+    <section className='Aya-Flight_Card' data-aos='fade-left'>
         <Card className={page==='FlightBooking' ? 'flightCards' : 'hoteltCards'}>
         <Card.Body>
         <div className='part1 d-flex '>
@@ -13,22 +29,22 @@ const FlightCard = ({page , imgFlightCard ,title , subtitle ,button ,price_Base_
                 <p className='subtitle mb-0'>{subtitle}</p>
                 <div className='d-flex align-items-center'>
                     <button className='button'>{button}</button>
-                    <p className='reviews mb-0'><span className='fw-bold'>Very Good</span> 54 reviews</p>
+                    <p className='reviews mb-0'><span className='fw-bold'>{data.reviews_span}</span> {data.reviews_p}</p>
                 </div>
             </div>
         </div>
         <div className="Line1"></div>
-        <p className='part2'>Your booking is protected by <span className='part2-span'>golobe</span></p>
+        <p className='part2'>{data.part2_Span1} <span className='part2-span'>{data.part2_Span2}</span></p>
         <div className="Line1"></div>
         <div className="part3">
-            <p className='title'>Price Details</p>
+            <p className='title'>{data.title_part3}</p>
             <div className="list-price ">
                 <div className="lists d-flex justify-content-between">
                 <ul className='list1'>
-                    <li className='item'>Base Fare</li>
-                    <li className='item'>Discount</li>
-                    <li className='item'>Taxes</li>
-                    <li className='item'>Service Fee</li>
+                    <li className='item'>{data.list1_item1}</li>
+                    <li className='item'>{data.list1_item2}</li>
+                    <li className='item'>{data.list1_item3}</li>
+                    <li className='item'>{data.list1_item4}</li>
                 </ul>
                 <ul className='list2'>
                     <li className='item'>{price_Base_Fare}</li>

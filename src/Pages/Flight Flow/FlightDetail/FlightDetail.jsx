@@ -6,7 +6,7 @@ import EmiratesAirlinesPolicies from '../../../Components/EmiratesAirlinesPolici
 import FlightDeatailsGalary from '../../../Components/FlightDeatailsGalary/FlightDeatailsGalary';
 import Newsletter from '../../../Components/Newsletter/Newsletter';
 import Footer from '../../../Components/Footer/Footer';
-import CardFlightDetailFinal from '../../../Components/CardFlightDetailFinal/CardFlightDetailFinal';
+//import CardFlightDetailFinal from '../../../Components/CardFlightDetailFinal/CardFlightDetailFinal';
 import PaymentMethods from '../../../Components/PaymentMethods/PaymentMethods'
 
 export default function FlightDetail() {
@@ -16,7 +16,6 @@ export default function FlightDetail() {
       <FlightDetailsHero />
       <FlightDeatailsGalary />
       <EmiratesAirlinesPolicies />
-      <CardFlightDetailFinal />
       <PaymentMethods/>
       <Newsletter />
       <Footer />

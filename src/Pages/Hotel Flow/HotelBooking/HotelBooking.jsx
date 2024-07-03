@@ -5,9 +5,13 @@ import imgHotelCard from './../../../assets/images/Booking detail (2).png'
 import './HotelBooking.css'
 import FlightForm from "../../../Components/FlightForm/FlightForm";
 import CardHotelDetailFinal from "../../../Components/CardHotelDetailFinal/CardHotelDetailFinal";
-export default function HotelBooking() {
+import Newsletter from "../../../Components/Newsletter/Newsletter";
+import Footer from "../../../Components/Footer/Footer";
+import Navigation from "../../../Components/Nav/Nav";
+export default function HotelBooking(navButtons ,navButtonsForMobile ) {
   return (
     <section className="FlightBooking">
+      <Navigation navButtons={navButtons} navButtonsForMobile={navButtonsForMobile}/>
       <Path country={'Turkey'} city={'Istanbul'} hotel_name={'CVK Park Bosphorus Hotel Istanbul'}/>
       <div className='FlightBookingRow'>
       <div className="FlightContainer" >
@@ -20,6 +24,8 @@ export default function HotelBooking() {
       <FlightCard page={'HotelBooking'} imgFlightCard={imgHotelCard} title={'CVK Park Bosphorus...'} subtitle={<p className="subtitle" style={{marginBottom: '16px'}}>Superior room - 1 double bed or 2 twin beds</p>} button={'4.2'}
       price_Base_Fare={'240 $'} price_Discount={'0 $'} price_taxes={'20 $'} price_Service_Fee={'5 $'} price_total={'265 $'} />
     </div>
+    <Newsletter/>
+    <Footer/>
     </section>
   )
 }

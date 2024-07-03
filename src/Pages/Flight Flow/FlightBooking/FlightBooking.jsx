@@ -1,16 +1,17 @@
 import CardFlightDetailFinal from "../../../Components/CardFlightDetailFinal/CardFlightDetailFinal";
 import Path from "../../../Components/Path/Path";
-// import Nav from "../../../Components/Nav/Nav";
 import './FlightBooking.css'
 import Footer from "../../../Components/Footer/Footer";
 import FlightCard from "../../../Components/FlightCard/FlightCard";
 import FlightAccordion from "../../../Components/FlightAccordion/FlightAccordion";
 import FlightForm from "../../../Components/FlightForm/FlightForm";
 import imgFlightCard from './../../../assets/images/Booking detail.png'
-export default function FlightBooking() {
+import Newsletter from "../../../Components/Newsletter/Newsletter";
+import Navigation from "../../../Components/Nav/Nav";
+export default function FlightBooking(navButtons ,navButtonsForMobile ) {
   return (
     <section className="FlightBooking">
-    {/* <Nav/> */}
+    <Navigation navButtons={navButtons} navButtonsForMobile={navButtonsForMobile}/>
     <Path country={'Turkey'} city={'Istanbul'} hotel_name={'CVK Park Bosphorus Hotel Istanbul'} />
     <div className='FlightBookingRow'>
       <div className="FlightContainer" >
@@ -24,6 +25,7 @@ export default function FlightBooking() {
       <FlightCard page={'FlightBooking'} imgFlightCard={imgFlightCard} title={'Economy'} subtitle={<p className="subtitle" style={{marginBottom: '20px'}}>Emirates A380 Airbus</p>} button={'4.2'}
       price_Base_Fare={'400 $'} price_Discount={'400 $'} price_taxes={'400 $'} price_Service_Fee={'400 $'} price_total={'400 $'}/>
     </div>
+    <Newsletter/>
     <Footer/>
     </section>
   )

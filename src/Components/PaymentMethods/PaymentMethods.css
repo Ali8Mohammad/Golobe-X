@@ -1,9 +1,9 @@
 .RH_PaymentMethods {
     width: 1232px;
-    margin: auto ;
+    margin: auto;
 }
 
-.RH_paymenttitlte{
+.RH_paymenttitlte {
     font-family: var(--second-font);
     font-size: 32px;
     font-weight: 700;
@@ -11,7 +11,7 @@
     text-align: left;
     margin-top: 40px;
 
-      
+
 }
 
 .RH_groupcard {
@@ -88,25 +88,84 @@
     font-size: 12px;
 }
 
+/*first box*/
+
+
 .RH_card1 {
     width: 387px;
     height: 212px;
-    background-color:var(--main-bgcolor) ;
+    background-color: var(--main-bgcolor);
     border: 2px dashed var(--main-bgcolor);
     border-radius: 16px;
     Padding: 16px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    gap: 57px !important;
+    display: grid;
+
 
 }
 
 
-/*first box*/
 
-.RH_1row{
+.RH_1row {
     display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.RH_pass span {
+    font-family: var(--main-font);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    text-align: left;
+    display: block;
+    height: 29px!important;
+
+}
+
+.RH_pass p {
+    font-family: var(--main-font);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39.01px;
+    text-align: left;
+
+    width: 71px;
+height: 39px;
+gap: 0px;
+opacity: 0px;
+margin-top: -10px;
+
+}
+
+.RH_2row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    grid-area: 16px!important;
+    margin-top:-16px !important;
+}
+
+.RH_pass2 span {
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.63px;
+    text-align: left;
+
+}
+
+.RH_pass2 p {
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.38px;
+    text-align: left;
+    
+
+
 }

@@ -3,12 +3,11 @@
     padding: 1rem;
     background: var(--second-text-color);
     box-shadow: 0px 4px 16px 0px #1122110D;
-    width: 46.8rem;
-    height: 15.12rem;
+    width: 49.375rem;
     border-radius: var(--third-border-radius);
 }
 .Aya-Accordion .Accordion-Header {
-    width: 44.75rem;
+    width: 47.375rem;
     height: 5rem;
     padding: 1rem;
     border-radius: var(--third-border-radius);
@@ -36,17 +35,18 @@
     margin-bottom: 0;
 }
 .Aya-Accordion .Accordion-Header-Hiden {
-    width: 44.75rem;
+    width: 47.375rem;
     display: flex;
+    padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
-    height: 7.125rem;
+    height: 9.125rem;
     border-radius: var(--third-border-radius);
 }
 .Aya-Accordion .Header-Body-Hiden {
-    width: 395rem;
+    width:  44.75rem;
     height: 7.125rem;
-    padding-left: 0.75rem;
+    /* padding-left: 0.75rem; */
 }
 .Aya-Accordion .Header-Body-Hiden .Header-Body-Hiden-para1 {
     font-family: var(--second-font);
@@ -79,7 +79,7 @@
 .Aya-Accordion .Accordion-Header-Hiden .Header-icon {
     width: 3rem;
     height: 3rem;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,64 @@
 .Aya-Accordion .toogleHiden {
     display: none;
 }
-@media(min-width : 992px) and (max-width : 1310px) {
+@media (min-width : 1310px) and (max-width : 1400px) {
+    .Aya-Accordion{
+        width: 46.375rem;
+    }
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden{
+        width: 44.375rem;
+    }
+}
+@media (min-width : 1270px) and (max-width : 1309px) {
+    .Aya-Accordion{
+        width: 44.375rem;
+    }
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden{
+        width: 42.375rem;
+    }
+}
+@media (min-width : 1225px) and (max-width : 1269px) {
+    .Aya-Accordion{
+        width: 42.375rem;
+    }
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden{
+        width: 41.375rem;
+    }
+}
+@media (min-width : 1180px) and (max-width : 1224px) {
+    .Aya-Accordion{
+        width: 39.375rem;
+    }
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden{
+        width: 37.375rem;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden .Header-Body-Hiden-para2 {
+        width: 33rem;
+    }
+}
+@media (min-width : 1130px) and (max-width : 1179px)  {
+    .Aya-Accordion{
+        width: 39.375rem;
+    }
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden{
+        width: 37.375rem;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden .Header-Body-Hiden-para2 {
+        width: 33rem;
+    }
+}
+@media (min-width : 1100px) and (max-width : 1129px) {
+    .Aya-Accordion{
+        width: 39.375rem;
+    }
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden{
+        width: 37.375rem;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden .Header-Body-Hiden-para2 {
+        width: 33rem;
+    }
+}
+@media (min-width : 993px) and (max-width : 1099px)  {
     .Aya-Accordion {
         width: 56.25rem;
     }
@@ -116,55 +173,80 @@
         width: 53.125rem;
     }
     .Aya-Accordion .Accordion-Header-Hiden .Header-icon {
-        padding-right: 1rem;
+        padding-right: 0rem;
     }
 }
-@media(min-width : 768px) and (max-width : 991px) {
+@media (min-width : 768px) and (max-width : 992px)  {
     .Aya-Accordion {
         width: 44.8rem;
     }
-    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden {
-        width: 43.8rem;
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden , .Aya-Accordion .Header-Body-Hiden {
+        width: 42.8rem;
     }
     .Aya-Accordion .Accordion-Header-Hiden .Header-icon img {
-        margin-right: 15px;
+        margin-right: 8px;
     }
 }
 @media(min-width : 576px) and (max-width : 767px) {
     .Aya-Accordion {
         width: 32rem;
-        height: 16rem;
+        height: 17rem;
     }
     .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden {
-        width: 31rem;
+        width: 30rem;
+    }
+    .Aya-Accordion .Header-Body-Hiden {
+        width: 26.2rem;
     }
     .Aya-Accordion .Accordion-Header-Hiden .Header-Body-Hiden-para2 {
-        width: 27rem;
+        width: 26.5rem;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden .Header-icon {
+        margin-right: 1rem;
     }
 }
 @media(min-width : 400px) and (max-width : 575px) {
     .Aya-Accordion {
         width: 21rem;
-        height: 16rem;
+        height: 18.5rem;
     }
     .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden {
-        width: 20rem;
+        width: 19rem;
+    }
+    .Aya-Accordion .Header-Body-Hiden {
+        width: 15.5rem;
     }
     .Aya-Accordion .Accordion-Header-Hiden .Header-Body-Hiden-para2 {
         width: 16rem;
-        height: 65px;
+        height: 85px;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden .Header-icon {
+        height: 9rem;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden {
+        height: 10.5rem;
+        padding-top: 10px;
+        align-items: flex-start;
     }
 }
 @media(min-width : 320px) and (max-width : 399px) {
     .Aya-Accordion {
         width: 16.5rem;
-        height: 18.5rem;
+        height: 20.5rem;
     }
-    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden {
-        width: 15.5rem;
+    .Aya-Accordion .Accordion-Header , .Aya-Accordion .Accordion-Header-Hiden ,.Aya-Accordion .Header-Body-Hiden {
+        width: 14.5rem;
     }
     .Aya-Accordion .Accordion-Header-Hiden .Header-Body-Hiden-para2 {
-        width: 10rem;
+        width: 10.8rem;
         height: 100px;
     }
-}
+    .Aya-Accordion .Accordion-Header-Hiden .Header-icon {
+        height: 11.3rem;
+    }
+    .Aya-Accordion .Accordion-Header-Hiden {
+        height: 12.5rem;
+        padding-top: 10px;
+        align-items: flex-start;
+    }
+} 
