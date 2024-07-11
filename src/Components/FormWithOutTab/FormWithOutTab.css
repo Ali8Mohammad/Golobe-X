@@ -95,33 +95,10 @@
     .AM_searchButton {
         margin-right: 421px;
     }
-    .MS-SButton{
+    .MS-SButton ,.AM_searchButton{
         margin-right: 0 !important;
     }
-    .MS-text-field1,.MS-text-field{
-        width: 100% !important;
-    }
-}
-@media screen and (max-width:560px) {
-    .AM-field {
-        width: 20rem !important;
-    }
-    .AM-Returnfield {
-        width: 20rem !important;
-        
-    }
-    .AM_searchButton {
-        margin-right: 256px;
-    }
-}
-@media screen and (max-width:410px) {
-    .AM-field {
-        width: 14rem !important;
-    }
-    .AM-Returnfield  {
-        width: 14rem !important;
-    }
-    .AM_searchButton {
-        margin-right: 167px;
+    .MS-text-field1,.MS-text-field ,.AM-field , .AM-Returnfield{
+        width: 100%!important;
     }
 }

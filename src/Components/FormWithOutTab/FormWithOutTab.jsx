@@ -73,7 +73,7 @@ const FormWithOutTab = ({ page }) => {
       id: "2"
     },
   ];
-
+  const [value, setValue] = useState('Lahore - Karachi');
   const handleShowStays = () => {
     if (token) {
       navigate('/Graduation-Project/hotelflow/listing');
@@ -81,7 +81,12 @@ const FormWithOutTab = ({ page }) => {
       navigate('/Graduation-Project/auth/login');
     }
   };
-
+  const handleImageClick = () => {
+    const parts = value.split(' - ');
+    if (parts.length === 2) {
+      setValue(`${parts[1]} - ${parts[0]}`);
+    }
+  };
   const OSRoom = [{ Title: `Room ${index}` }];
 
   return (
@@ -214,13 +219,14 @@ const FormWithOutTab = ({ page }) => {
             <TextField
               label="From - To"
               id="outlined-size-small"
-              defaultValue="Lahore - Karachi"
+              value={value}
+                onChange={(e) => setValue(e.target.value)}
               size="large"
               className="AM-field"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
-                    <img src={twoArrow} alt="icon" className="AM-field-icon" />
+                    <img src={twoArrow} alt="icon"  onClick={handleImageClick} className="AM-field-icon" />
                   </InputAdornment>
                 ),
               }}
