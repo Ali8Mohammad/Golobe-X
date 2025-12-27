@@ -74,9 +74,9 @@ export default function ShowFlightsMain() {
   const handleShowPlaces = () => {
     const token = localStorage.getItem('authToken');
     if (token) {
-      navigate('/Graduation-Project/flightflow/listing');
+      navigate('/Golobe-X/flightflow/listing');
     } else {
-      navigate('/Graduation-Project/auth/login');
+      navigate('/Golobe-X/auth/login');
     }
   };
 

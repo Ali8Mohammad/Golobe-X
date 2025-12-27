@@ -56,7 +56,7 @@ export default function VerifyCodeForm({ Back }) {
     const storedCode = localStorage.getItem('verificationCode');
 
     if (code === storedCode) {
-      navigate('/Graduation-Project/auth/new_password');
+      navigate('/Golobe-X/auth/new_password');
     } else {
       setError('The code is incorrect.');
     }
@@ -71,7 +71,7 @@ export default function VerifyCodeForm({ Back }) {
   return (
     <ThemeProvider theme={theme}>
       <div className='NM_SignUpF'>
-        <Link className="NM_Back" to={"/Graduation-Project/auth/login"} rel="noopener noreferrer">
+        <Link className="NM_Back" to={"/Golobe-X/auth/login"} rel="noopener noreferrer">
           <img src={Back} alt="<" />
           <p>Back to login</p>
         </Link>

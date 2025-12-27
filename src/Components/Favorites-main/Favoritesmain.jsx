@@ -25,8 +25,8 @@ export default function Favoritesmain() {
     }, []);
 
     const location = useLocation();
-    const isListingPage = location.pathname === '/Graduation-Project/hotelflow/listing';
-    const isFavoritesPage = location.pathname === '/Graduation-Project/hotelflow/favorites';
+    const isListingPage = location.pathname === '/Golobe-X/hotelflow/listing';
+    const isFavoritesPage = location.pathname === '/Golobe-X/hotelflow/favorites';
 
     const initialInfo = [
         {
@@ -153,7 +153,7 @@ export default function Favoritesmain() {
 
                             <div className={isListingPage ? 'MH-box-button2 NM' : 'MH-box-button2'} data-aos='flip-up'>
                                 {isListingPage ? (
-                                    <Link className='NM_ViewPlaceBtn' to="/Graduation-Project/hotelflow/detail" rel="noopener noreferrer">
+                                    <Link className='NM_ViewPlaceBtn' to="/Golobe-X/hotelflow/detail" rel="noopener noreferrer">
                                         <button>
                                             View Place
                                         </button>

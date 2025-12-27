@@ -2,7 +2,7 @@
   "name": "globe-x",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Ali8Mohammad.github.io/Graduation-Project/",
+  "homepage": "https://ali8mohammad.github.io/Golobe-X/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

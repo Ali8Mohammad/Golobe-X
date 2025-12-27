@@ -76,9 +76,9 @@ const FormWithOutTab = ({ page }) => {
 
   const handleShowStays = () => {
     if (token) {
-      navigate('/Graduation-Project/hotelflow/listing');
+      navigate('/Golobe-X/hotelflow/listing');
     } else {
-      navigate('/Graduation-Project/auth/login');
+      navigate('/Golobe-X/auth/login');
     }
   };
 

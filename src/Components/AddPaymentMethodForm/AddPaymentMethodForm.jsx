@@ -68,13 +68,13 @@ export default function AddPaymentMethodForm({Back}) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/Graduation-Project');
+    navigate('/Golobe-X');
   };
 
   return (
     <ThemeProvider theme={theme}>
       <div className='NM_SignUpF'>
-        <Link className="NM_Back" to={"/Graduation-Project/auth"} rel="noopener noreferrer">
+        <Link className="NM_Back" to={"/Golobe-X/auth"} rel="noopener noreferrer">
           <img src={Back} alt="<" />
           <p>Back</p>
         </Link>

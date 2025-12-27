@@ -21,7 +21,7 @@ export default function PaymentMethods() {
   };
 
   const linkto = [
-    <Link className='MH-addbtn ' to={"/Graduation-Project/hotelflow/booking3"}>Add Card</Link>
+    <Link className='MH-addbtn ' to={"/Golobe-X/hotelflow/booking3"}>Add Card</Link>
   ]
   return (
     <section className='RH_PaymentMethods'>

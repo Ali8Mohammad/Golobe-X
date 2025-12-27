@@ -57,7 +57,7 @@ export default function SignUpForm({ facebook, google, apple }) {
     setPhone('');
     setPassword('');
     setConfirmPassword('');
-    navigate('/Graduation-Project/auth/add_payment');
+    navigate('/Golobe-X/auth/add_payment');
   }
   
   const theme = createTheme({
@@ -218,7 +218,7 @@ export default function SignUpForm({ facebook, google, apple }) {
         <div className='NM_LoginLink'>
           <p>
             Already have an account?
-            <Link to={"/Graduation-Project/auth/login"} rel="noopener noreferrer"> Login
+            <Link to={"/Golobe-X/auth/login"} rel="noopener noreferrer"> Login
             </Link>
           </p>
         </div>

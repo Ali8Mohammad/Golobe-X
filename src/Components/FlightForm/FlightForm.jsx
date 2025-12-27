@@ -25,7 +25,7 @@ const FlightForm = ({page}) => {
         <p className='Login-Or-Signup'>{data.Login_Or_Signup}</p>
         <input className='PhoneNumber' type="number" placeholder='Phone Number' />
         <p className='Text'>{data.text_part1}<span>{data.text_part1_span}</span></p>
-        <Link to={page === 'FlightBooking' ? '/Graduation-Project/Flightflow/booking2' : '/Graduation-Project/Hotelflow/booking2'}>
+        <Link to={page === 'FlightBooking' ? '/Golobe-X/Flightflow/booking2' : '/Golobe-X/Hotelflow/booking2'}>
             <button className='Continue'><span>{data.button_continue}</span></button>
         </Link>
     </div>

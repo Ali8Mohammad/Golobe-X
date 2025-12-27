@@ -16,7 +16,7 @@ export default function FlightBooking3({  navButtons,
     navList,}) {
     const linkto = [
         // eslint-disable-next-line react/jsx-key
-        <Link className='MH-addbtn ' to={"/Graduation-Project/flightflow/booking3"}>Add Card</Link>
+        <Link className='MH-addbtn ' to={"/Golobe-X/flightflow/booking3"}>Add Card</Link>
     ]
     return (
         <section className="MH-FlightBooking">

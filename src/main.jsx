@@ -76,7 +76,7 @@ const State = () => {
     }, []);
 
     useEffect(() => {
-        if (location.pathname === '/Graduation-Project/') {
+        if (location.pathname === '/Golobe-X') {
             setCurrentPage('landingpage');
         } else {
             setCurrentPage('otherpage');
@@ -134,7 +134,7 @@ const State = () => {
                         <Navlinks
                             type="button"
                             className={NM_Login2}
-                            linkTo="/Graduation-Project/auth/login"
+                            linkTo="/Golobe-X/auth/login"
                             linkText="Login"
                             onClick={toggleButtons}
                             classNameLink={NM_LinkLog}
@@ -142,7 +142,7 @@ const State = () => {
                         <Navlinks
                             type="button"
                             className={NM_Signup2}
-                            linkTo="/Graduation-Project/auth"
+                            linkTo="/Golobe-X/auth"
                             linkText="Sign up"
                             onClick={toggleButtons}
                             classNameLink={NM_LinkSign}
@@ -154,7 +154,7 @@ const State = () => {
                         <Navlinks
                             type="list"
                             className="AM_Link"
-                            linkTo="/Graduation-Project/hotelflow/favorites"
+                            linkTo="/Golobe-X/hotelflow/favorites"
                             imgSrc={favourite}
                             imgAlt="favourite"
                             linkText="Favourites"
@@ -184,15 +184,15 @@ const State = () => {
     const navButtonsForMobile = (
         <>
             <li className={currentPage === 'landingpage' ? "" : 'd-none'}>
-                <Link className='NM_Link' to="/Graduation-Project/auth/login" rel="noopener noreferrer"> Login
+                <Link className='NM_Link' to="/Golobe-X/auth/login" rel="noopener noreferrer"> Login
                 </Link>
             </li>
             <li className={currentPage === 'landingpage' ? '' : 'd-none'}>
-                <Link className='NM_Link' to="/Graduation-Project/auth" rel="noopener noreferrer"> Sign Up
+                <Link className='NM_Link' to="/Golobe-X/auth" rel="noopener noreferrer"> Sign Up
                 </Link>
             </li>
             <li className={currentPage === 'landingpage' ? 'd-none' : ''}>
-                <Link className='AM_Link' to='/Graduation-Project/hotelflow/favorites'>
+                <Link className='AM_Link' to='/Golobe-X/hotelflow/favorites'>
                     <img src={favourite} alt="" />Favourites</Link>
             </li>
             <li className={currentPage === 'landingpage' ? 'd-none' : ''}>
@@ -215,7 +215,7 @@ const State = () => {
           </div>
           <img className='AM_Navline' src={navLine} alt="" />
           <div className='AM_AccountLinks'>
-          <Link className='AM_Link1' to="/Graduation-Project/myaccount" onClick={handleNavLinkClick}><img src={profileBlack} alt=""/>My Account</Link>
+          <Link className='AM_Link1' to="/Golobe-X/myaccount" onClick={handleNavLinkClick}><img src={profileBlack} alt=""/>My Account</Link>
             <Link className='AM_Link1'><img src={card} alt="" />Payments</Link>
             <Link className='AM_Link1'><img src={setting} alt="" />Setting</Link>
           </div>
@@ -236,7 +236,7 @@ const State = () => {
     return (
         <React.StrictMode>
             <Routes>
-                <Route path="/Graduation-Project/" element={<App />}>
+                <Route path="/Golobe-X/" element={<App />}>
                     <Route index element={
                         <LandingPage
                             head2={head2}
@@ -247,7 +247,7 @@ const State = () => {
                             navButtonsForMobile={navButtonsForMobile}
                         />
                     } />
-                    <Route path="/Graduation-Project/flightflow" element={<FlightFlow />}>
+                    <Route path="/Golobe-X/flightflow" element={<FlightFlow />}>
                         <Route index element={
                             <FlightsSearch
                                 navButtons={navButtons(true, false)}
@@ -291,7 +291,7 @@ const State = () => {
                             />
                         } />
                     </Route>
-                    <Route path="/Graduation-Project/hotelflow" element={<HotelFlow />}>
+                    <Route path="/Golobe-X/hotelflow" element={<HotelFlow />}>
                         <Route index element={<HotelSearch
                             navButtons={navButtons(true, false)}
                             navButtonsForMobile={navButtonsForMobile}
@@ -331,7 +331,7 @@ const State = () => {
                          navList={navList}    
                          />} />
                     </Route>
-                    <Route path="/Graduation-Project/myaccount" element={<AccountFlow />}>
+                    <Route path="/Golobe-X/myaccount" element={<AccountFlow />}>
                         <Route index element={<MyAccount
                             navButtons={navButtons(true, false)}
                             navButtonsForMobile={navButtonsForMobile}
@@ -339,7 +339,7 @@ const State = () => {
                         />
                         } />
                     </Route>
-                    <Route path="/Graduation-Project/auth" element={<Authenticate />}>
+                    <Route path="/Golobe-X/auth" element={<Authenticate />}>
                         <Route index element={<SignUp />} />
                         <Route path="login" element={<Login />} />
                         <Route path="new_password" element={<NewPassword />} />

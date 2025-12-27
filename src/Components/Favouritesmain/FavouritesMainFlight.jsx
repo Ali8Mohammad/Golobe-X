@@ -24,7 +24,7 @@ function FavouritesMainFlight() {
   }, []);
   
   const location = useLocation();
-  const isFavoritesPage = location.pathname === '/Graduation-Project/flightflow/favorites';
+  const isFavoritesPage = location.pathname === '/Golobe-X/flightflow/favorites';
 
   const initialFlights = [
     {
@@ -190,7 +190,7 @@ function FavouritesMainFlight() {
                     <button className="favBtn" onClick={() => toggleFavorite(item.id)}>
                       {item.isFavorite ? <img src={heart} alt="heart" /> : <img src={fav} />}
                     </button>
-                    <Link className='AM_BtnLink' to={'/Graduation-Project/flightflow/detail'}>
+                    <Link className='AM_BtnLink' to={'/Golobe-X/flightflow/detail'}>
                       <button className="dealBtn">View Deals</button>
                     </Link>
                 </div>

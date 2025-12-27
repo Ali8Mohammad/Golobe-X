@@ -68,7 +68,7 @@ export default function HotelListingThree() {
                         {item.paragraff}{" "}
                         <span className="OS-TextSpan-style">{item.span}</span>
                       </p>
-                      <Link className='' to='/Graduation-Project/hotelflow/booking'>  <button className="OS-Btn-Room">{item.btn}</button></Link>    
+                      <Link className='' to='/Golobe-X/hotelflow/booking'>  <button className="OS-Btn-Room">{item.btn}</button></Link>    
                     </div>
                   </div>
                 </div>

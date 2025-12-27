@@ -48,12 +48,12 @@ export default function ForgotPasswordForm({ facebook, google, apple, Back }) {
     localStorage.setItem('resetEmail', email);
     localStorage.setItem('verificationCode', code);
 
-    navigate('/Graduation-Project/auth/verify_code');
+    navigate('/Golobe-X/auth/verify_code');
   };
   return (
     <ThemeProvider theme={theme}>
       <div className='NM_SignUpF'>
-        <Link className="NM_Back" to={"/Graduation-Project/auth/login"} rel="noopener noreferrer">
+        <Link className="NM_Back" to={"/Golobe-X/auth/login"} rel="noopener noreferrer">
           <img src={Back} alt="<" />
           <p>Back to login</p>
         </Link>

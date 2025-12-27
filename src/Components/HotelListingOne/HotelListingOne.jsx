@@ -101,7 +101,7 @@ export default function HotelListingOne() {
               {OSbutton.map((item, index) => {
                 return <button key={index} className={item.class}><img src={item.content} alt="" /></button>
               })}
-              <Link className='OS-link-Book' to='/Graduation-Project/hotelflow/booking'><button className='OS-Btn-Book OS-btn-icon'>Book now</button></Link>
+              <Link className='OS-link-Book' to='/Golobe-X/hotelflow/booking'><button className='OS-Btn-Book OS-btn-icon'>Book now</button></Link>
             </div>
           </div>
         </div>

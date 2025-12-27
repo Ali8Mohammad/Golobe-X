@@ -14,7 +14,7 @@ export default function HotelBooking2 ({  navButtons,
   navButtonsForMobile,
   navList,}) {
     const linkto = [
-        <Link className='MH-addbtn ' to={"/Graduation-Project/hotelflow/booking3"}>Add Card</Link>
+        <Link className='MH-addbtn ' to={"/Golobe-X/hotelflow/booking3"}>Add Card</Link>
     ]
     return (
         <section className="MH-Hotelbooking2">

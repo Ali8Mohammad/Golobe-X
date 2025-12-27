@@ -57,7 +57,7 @@ export default function LoginForm({ facebook, google, apple }) {
     setEmail('');
     setPassword('');
     setError('');
-    navigate('/Graduation-Project', { state: { token } });
+    navigate('/Golobe-X', { state: { token } });
   };
   const theme = createTheme({
     components: {
@@ -145,7 +145,7 @@ export default function LoginForm({ facebook, google, apple }) {
                 }}
               />
             </FormGroup>
-            <Link className="NM_ForgetPassword" to={"/Graduation-Project/auth/forget_password"} rel="noopener noreferrer">
+            <Link className="NM_ForgetPassword" to={"/Golobe-X/auth/forget_password"} rel="noopener noreferrer">
               Forgot Password
             </Link>
           </div>
@@ -154,7 +154,7 @@ export default function LoginForm({ facebook, google, apple }) {
         <div className='NM_LoginLink'>
           <p>
             Don’t have an account?
-            <Link to={"/Graduation-Project/auth"} rel="noopener noreferrer">  Sign up
+            <Link to={"/Golobe-X/auth"} rel="noopener noreferrer">  Sign up
             </Link>
           </p>
         </div>

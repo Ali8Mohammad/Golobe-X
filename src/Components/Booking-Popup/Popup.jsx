@@ -55,7 +55,7 @@ export default function Popup({link}) {
                     <input type="checkbox"  />
                     <p>Securely save my information for 1-click checkout</p>
                     </div>
-                    <Link className='MH-addbtn ' to={"/Graduation-Project/flightflow/booking3"}>
+                    <Link className='MH-addbtn ' to={"/Golobe-X/flightflow/booking3"}>
                     <div className="MH-btn">
                         Add Card
                     </div>

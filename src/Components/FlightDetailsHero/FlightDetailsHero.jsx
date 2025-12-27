@@ -48,7 +48,7 @@ export default function FlightDetailsHero() {
         <div>
           <img src={heart} alt="plane" className="RH_Heart" />
           <img src={sharing} alt="plane" className="RH_sharing" />
-          <Link to="/Graduation-Project/flightflow/booking">
+          <Link to="/Golobe-X/flightflow/booking">
             <button className="RH_book">Book now</button>
           </Link>
         </div>

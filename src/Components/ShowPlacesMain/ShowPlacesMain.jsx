@@ -14,76 +14,60 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useNavigate } from 'react-router-dom';
 
 const ShowPlacesMain = () => {
-  let index = 1;
-
-  const [destination, setDestination] = useState(false);
-  const [selectedCity, setSelectedCity] = useState('Istanbul, Turkey');
-  const [room, setRoom] = useState(false);
-  const [count, setCount] = useState(0);
-  const [count1, setCount1] = useState(0);
-  const [add, setAdd] = useState('');
   const navigate = useNavigate();
   const token = localStorage.getItem('authToken');
 
-  const toggleHandler = () => {
-    setDestination(!destination);
-  };
+  const [destinationOpen, setDestinationOpen] = useState(false);
+  const [roomOpen, setRoomOpen] = useState(false);
+  const [selectedCity, setSelectedCity] = useState('Istanbul, Turkey');
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
 
-  const RoomHandler = () => {
-    setRoom(!room);
-  };
+  const totalGuests = adults + children;
+  const roomsCount = 1;
 
-  const click = (city) => {
-    setSelectedCity(city);
-  };
-
-  const changeRoom = () => {
-    setAdd(add);
-  };
-
-  let Count = count + count1;
-  let Room = index;
-
-  const OSdataDes = [
-    { des1: 'Makkah, Saudi Arabia', des2: 'Dubai, United Arab Emirates', des3: 'Al Madinah, Saudi Arabia', des4: 'Cairo, Egypt' },
-    { des1: 'Hurghada, Egypt', des2: 'Sharm El Sheikh, Egypt', des3: 'Alexandria, Egypt', des4: 'Istanbul, Turkey' },
-    { des1: 'Abu Dhabi, United Arab Emirates', des2: 'Sharjah, United Arab Emirates', des3: 'Riyadh, Saudi Arabia', des4: 'Jeddah, Saudi Arabia' },
-    { des1: 'Ain Sokhna, Egypt', des2: 'Beirut, Lebanon', des3: 'Dahab, Egypt', des4: 'Doha, Qatar' },
-    { des1: 'Aswan, Egypt', des2: 'Kuwait', des3: 'Ajman, United Arab Emirates', des4: 'Amman, Jordan' },
+  const cities = [
+    ['Makkah, Saudi Arabia', 'Dubai, United Arab Emirates', 'Al Madinah, Saudi Arabia', 'Cairo, Egypt'],
+    ['Hurghada, Egypt', 'Sharm El Sheikh, Egypt', 'Alexandria, Egypt', 'Istanbul, Turkey'],
+    ['Abu Dhabi, United Arab Emirates', 'Sharjah, United Arab Emirates', 'Riyadh, Saudi Arabia', 'Jeddah, Saudi Arabia'],
+    ['Ain Sokhna, Egypt', 'Beirut, Lebanon', 'Dahab, Egypt', 'Doha, Qatar'],
+    ['Aswan, Egypt', 'Kuwait', 'Ajman, United Arab Emirates', 'Amman, Jordan'],
   ];
 
-  const OSdataRoom = [
+  const guestsConfig = [
     {
-      Title: "Adults",
-      year: ">17years",
-      btn1contact: "-",
-      btn2contact: "+",
-      class: "OS-Ti-Flex",
-      id: "1"
+      id: 'adults',
+      title: 'Adults',
+      subtitle: '>17 years',
+      count: adults,
+      setCount: setAdults,
     },
     {
-      Title: "Children",
-      year: "<17years",
-      btn1contact: "-",
-      btn2contact: "+",
-      class: "OS-Ti-Flex OS-Ti-Padding1",
-      id: "2"
+      id: 'children',
+      title: 'Children',
+      subtitle: '<17 years',
+      count: children,
+      setCount: setChildren,
     },
   ];
 
   const handleShowStays = () => {
-    if (token) {
-      navigate('/Graduation-Project/hotelflow/listing');
-    } else {
-      navigate('/Graduation-Project/auth/login');
-    }
+    navigate(
+      token
+        ? '/Golobe-X/hotelflow/listing'
+        : '/Golobe-X/auth/login'
+    );
   };
-  const OSRoom = [{ Title: `Room ${index}` }];
 
   return (
     <>
       <div className="NM_TextField">
         <TextField
+          label="Enter Destination"
+          value={selectedCity}
+          size="large"
+          className="MS-firstfield OS-firstfiled"
+          onClick={() => setDestinationOpen(!destinationOpen)}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -91,64 +75,56 @@ const ShowPlacesMain = () => {
               </InputAdornment>
             ),
           }}
-          label="Enter Destination"
-          id="outlined-size-small"
-          value={selectedCity}
-          size="large"
-          className="MS-firstfield OS-firstfiled"
-          onClick={toggleHandler}
         />
-        <div className={destination ? "OS-Destination" : "OS-DestinationDisplay"}>
-          <h1 className='OS-Destination-h1'>popular cities</h1>
-          <div>
-            {OSdataDes.map((item,index) => {
-              return (
-                <div key={index} className='OS-DestinationFlex'>
-                  <div className='OS-Destination-Par' onClick={() => click(item.des1)}>{item.des1}</div>
-                  <p className='OS-Destination-Par' onClick={() => click(item.des2)}>{item.des2}</p>
-                  <p className='OS-Destination-Par' onClick={() => click(item.des3)}>{item.des3}</p>
-                  <p className='OS-Destination-Par' onClick={() => click(item.des4)}>{item.des4}</p>
-                </div>
-              );
-            })}
-          </div>
+
+        <div className={destinationOpen ? "OS-Destination" : "OS-DestinationDisplay"}>
+          <h1 className="OS-Destination-h1">popular cities</h1>
+
+          {cities.map((group, groupIndex) => (
+            <div key={groupIndex} className="OS-DestinationFlex">
+              {group.map(city => (
+                <p
+                  key={city}
+                  className="OS-Destination-Par"
+                  onClick={() => {
+                    setSelectedCity(city);
+                    setDestinationOpen(false);
+                  }}
+                >
+                  {city}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
+
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <div className="NM_full-width">
-            <DatePicker
-              id="outlined-size-small"
-              label="Check In"
-              defaultValue={dayjs('2022-02-12')}
-              size="large"
-              format="ddd/MM/YY"
-              className='MS-width'
-            />
-          </div>
+          <DatePicker
+            label="Check In"
+            defaultValue={dayjs()}
+            format="ddd/MM/YY"
+            className="MS-width"
+          />
         </LocalizationProvider>
+
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <div className="NM_full-width">
-            <DatePicker
-              id="outlined-size-small"
-              label="Check In"
-              defaultValue={dayjs('2022-02-12')}
-              size="large"
-              format="ddd/MM/YY"
-               className='MS-width'
-            />
-          </div>
+          <DatePicker
+            label="Check Out"
+            defaultValue={dayjs().add(1, 'day')}
+            format="ddd/MM/YY"
+            className="MS-width"
+          />
         </LocalizationProvider>
 
         <TextField
           label="Rooms & Guests"
-          id="outlined-size-small"
-          defaultValue="1 room, 2 guests"
-          value={`${Room} Room, ${Count} guests`}
+          value={`${roomsCount} Room, ${totalGuests} Guests`}
           size="large"
           className="MS-field1 OS-firstfiled1"
-          onClick={RoomHandler}
+          onClick={() => setRoomOpen(!roomOpen)}
           InputProps={{
             startAdornment: (
-              <InputAdornment position="end">
+              <InputAdornment position="start">
                 <img src={user} alt="icon" className="MS-field-icon" />
               </InputAdornment>
             ),
@@ -159,45 +135,59 @@ const ShowPlacesMain = () => {
             ),
           }}
         />
-        <div className={room ? "OS-Room" : "OS-DestinationDisplay"}>
-          {OSRoom.map((item) => {
-            return (
-              <>
-                <h1 className='OS-Destination-h1 OS-Room-h1'>{item.Title}</h1>
-                <div className='OS-Ti-Flex OS-All-Padding'>
-                  {OSdataRoom.map((item,index) => {
-                    return (
-                      <div key={index} className={item.class}>
-                        <img src={user} alt="icon" className="MS-field-icon" />
-                        <div className='OS-DivT-Room'>
-                          <h6 className='OS-h6-Room'>{item.Title}</h6>
-                          <p className='OS-p-Room'> {item.year} </p>
-                        </div>
-                        <div className='OS-Ti-Flex'>
-                          <button className='OS-btn-Room' id={item.id} onClick={() => { if (item.id == 1) { if (count <= 0) { setCount(count) } else { setCount(count - 1) } } else { if (count1 <= 0) { setCount1(count1) } else { setCount1(count1 - 1) } } Count = count + count1 }}>{item.btn1contact}</button>
-                          <p className='OS-pp-Room' id={item.id}>{count}</p>
-                          <p className='OS-pp-Room' id={item.id}>{count1}</p>
-                          <button className='OS-btn-Room' id={item.id} onClick={() => { if (item.id == 1) { setCount(count + 1) } else { setCount1(count1 + 1) } }}>{item.btn2contact}</button>
-                        </div>
-                      </div>
-                    );
-                  })}
+
+        <div className={roomOpen ? "OS-Room" : "OS-DestinationDisplay"}>
+          <h1 className="OS-Destination-h1 OS-Room-h1">Room 1</h1>
+
+          <div className="OS-Ti-Flex OS-All-Padding">
+            {guestsConfig.map(({ id, title, subtitle, count, setCount }) => (
+              <div key={id} className="OS-Ti-Flex OS-Ti-Padding1">
+                <img src={user} alt="icon" className="MS-field-icon" />
+
+                <div className="OS-DivT-Room">
+                  <h6 className="OS-h6-Room">{title}</h6>
+                  <p className="OS-p-Room">{subtitle}</p>
                 </div>
-              </>
-            );
-          })}
-          <div className='OS-Ti-FlexStyle'>
-            <div className='OS-Ti-Flex OS-Ti-Style' onClick={changeRoom}>
-              <div className='OS-Plus-Style'>+</div>
-              <h6 className='OS-AddRoom-Style'> add room</h6>
+
+                <div className="OS-Ti-Flex">
+                  <button
+                    className="OS-btn-Room"
+                    onClick={() => setCount(Math.max(0, count - 1))}
+                  >
+                    -
+                  </button>
+
+                  <p className="OS-pp-Room">{count}</p>
+
+                  <button
+                    className="OS-btn-Room"
+                    onClick={() => setCount(count + 1)}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="OS-Ti-FlexStyle">
+            <div className="OS-applyDiv-Style" onClick={() => setRoomOpen(false)}>
+              <p className="OS-apply-Style">Apply</p>
             </div>
-            <div className='OS-applyDiv-Style' onClick={RoomHandler}><p className='OS-apply-Style'>Apply</p></div>
           </div>
         </div>
       </div>
+
       <div className="MS-right">
-        <a><img src={plus} alt="plus" className="MS-plus" />Add Promo Code</a>
-        <button onClick={handleShowStays} className="MS-btnFlight"><img src={building} alt="arrow" />Show Places</button>
+        <a>
+          <img src={plus} alt="plus" className="MS-plus" />
+          Add Promo Code
+        </a>
+
+        <button onClick={handleShowStays} className="MS-btnFlight">
+          <img src={building} alt="arrow" />
+          Show Places
+        </button>
       </div>
     </>
   );
